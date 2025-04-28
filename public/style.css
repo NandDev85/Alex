@@ -1,0 +1,303 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e cores gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f1f1f1; /* Fundo suave */
+}
+
+/* Barra de navegação transparente (inicialmente invisível) */
+.navbar {
+  background-color: transparent; /* Inicialmente transparente */
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição suave */
+  opacity: 1; /* Navbar começa visível */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 110, 142, 0.9); /* Azul escuro com 90% de opacidade */
+  opacity: 1; /* Navbar se torna visível */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* Itens de menu sempre brancos */
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7ed957 !important; /* Verde claro para hover */
+}
+
+.navbar-brand {
+  color: #ffffff !important; /* Nome "Alex Ferreira" em branco */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #7ed957 !important; /* Cor verde clara quando o nome for sobrevoado */
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/6.jpeg') center/cover no-repeat;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Sobreposição escura */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Seções */
+.section-title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  position: relative;
+  color: #006e8e; /* Azul escuro para títulos */
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #7ed957; /* Verde claro para o underline */
+  display: block;
+  margin-top: 0.5rem;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Seções com fundo claro */
+section.bg-light {
+  background-color: #f8f9fa; /* Cinza claro para fundo */
+}
+
+/* Flip Cards para Áreas de Atuação */
+.flip-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: #006e8e;
+}
+
+.flip-card-front i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #006e8e;
+  transition: color 0.3s ease;
+}
+
+.flip-card-front:hover i {
+  color: #7ed957;
+}
+
+.flip-card-front .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.flip-card-front .card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.flip-card-back {
+  background-color: #f8f9fa;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.flip-card-back p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Flip Cards para Depoimentos com clique */
+.testimonial-flip-card {
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.testimonial-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.testimonial-flip-card.flipped .testimonial-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.testimonial-flip-card-front, .testimonial-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.testimonial-flip-card-front {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.testimonial-flip-card-back {
+  background-color: #f8f9fa;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial-flip-card-back img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimonial-flip-card-back p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.testimonial-flip-card-back .author {
+  font-weight: bold;
+  color: #006e8e;
+  margin-top: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .flip-card,
+  .testimonial-flip-card {
+    height: auto;
+  }
+  .flip-card-inner,
+  .testimonial-flip-card-inner {
+    transform: none !important;
+  }
+  .flip-card-front,
+  .flip-card-back,
+  .testimonial-flip-card-front,
+  .testimonial-flip-card-back {
+    position: relative;
+    height: auto;
+    box-shadow: none;
+  }
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #7ed957; /* Verde claro para botões */
+  border-color: #7ed957;
+}
+
+.btn-primary:hover {
+  background-color: #5bc0de; /* Azul claro para hover do botão */
+  border-color: #5bc0de;
+}
+
+/* Footer */
+footer {
+  background: #006e8e; /* Azul escuro para o rodapé */
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
