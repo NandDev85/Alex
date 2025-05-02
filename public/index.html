@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alex Ferreira - Psicólogo Clínico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Ferreira - Psicólogo Clínico especializado em ansiedade, relacionamentos e luto. Agende sua consulta online ou presencial.">
+  <meta name="keywords" content="psicólogo, terapia, saúde mental, ansiedade, depressão, relacionamentos, luto, psicoterapia">
+  <meta name="author" content="Alex Ferreira">
+  <meta property="og:title" content="Alex Ferreira - Psicólogo Clínico">
+  <meta property="og:description" content="Ajuda profissional para lidar com ansiedade, relacionamentos e processos de luto.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.alexferreirapsicologo.com.br">
+  <title>Alex Ferreira - Psicólogo Clínico | CRP 03/18232</title>
 
+  <!-- Pré-conexão para melhor performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome -->
@@ -12,106 +23,241 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Alex Ferreira - Psicólogo Clínico",
+    "image": "https://www.alexferreirapsicologo.com.br/images/22.jpeg",
+    "description": "Psicólogo Clínico especializado em ansiedade, relacionamentos e luto",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Anywhere St.",
+      "addressLocality": "Any City",
+      "addressRegion": "ST"
+    },
+    "telephone": "(71) 99701-0328",
+    "openingHours": "Mo,Tu,We,Th,Fr 08:00-20:00, Sa 09:00-12:00",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" aria-label="Navegação principal">
     <div class="container">
-      <a class="navbar-brand" href="#home">Alex Ferreira</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand" href="#home" aria-label="Alex Ferreira - Página inicial">Alex Ferreira</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#home" aria-current="page">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#areas">Áreas de Atuação</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
               Mais
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#terapia">Por que Fazer Terapia?</a></li>
-              <li><a class="dropdown-item" href="#abordagens">Abordagens Terapêuticas</a></li>
+              <li><a class="dropdown-item" href="#ajuda">Como Podemos Ajudar</a></li>
+              <li><a class="dropdown-item" href="#processos">Tipos de Abordagens</a></li>
               <li><a class="dropdown-item" href="#depoimentos">Depoimentos</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary btn-agendar" href="#contato" role="button">Contato</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  
 
-  <!-- Hero Section -->
+  <!-- Hero Section atualizada -->
   <section id="home" class="hero text-center text-white">
     <div class="container">
       <h1 class="display-4">"A vida é uma breve passagem"</h1>
       <p class="lead">porém, você não precisa estar aqui apenas de passagem. Faça valer a pena.</p>
+      <!-- "<div class="signature mt-4">
+        <img src="" alt="Assinatura Alex Ferreira" class="img-fluid" style="max-width: 200px;">
+      </div>" -->
     </div>
   </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <h2 class="section-title">Sobre Alex Ferreira</h2>
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center">
-          <img src="./images/22.jpeg" class="img-fluid rounded-circle mb-3" alt="Alex Ferreira">
+<!-- Sobre - Seção moderna -->
+<section id="sobre" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Alex Ferreira</h2>
+    <div class="row">
+      <!-- Coluna de imagens -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="profile-images">
+          <div class="main-image-container mb-4">
+            <img src="./images/22.jpeg" class="img-fluid rounded-lg shadow-lg" alt="Alex Ferreira" loading="lazy">
+            <div class="image-caption p-3">
+              <h5 class="mb-0">Alex Ferreira</h5>
+              <small class="text-muted">Psicólogo Clínico</small>
+            </div>
+          </div>
+          <div class="certifications-image">
+            <img src="./images/certificacoes.jpg" class="img-fluid rounded-lg shadow" alt="Certificações" loading="lazy">
+          </div>
         </div>
-        <div class="col-md-8">
-          <p>Alex Ferreira é Psicólogo Clínico (CRP 03/18232) com especializações em Psicanálise, Terapia Sistêmica de Casais e Família, Plantão Psicológico e Palestras. Atua também em prevenção à exploração sexual de crianças e adolescentes, com Formação pela UECE e Instituto Aliança.</p>
+      </div>
+      
+      <!-- Coluna de texto -->
+      <div class="col-lg-7 ps-lg-5">
+        <div class="qualifications-box p-4 p-md-5 rounded-lg shadow-sm">
+          <h3 class="mb-4 text-gradient">Formação Profissional</h3>
+          
+          <div class="qualification-item mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-id-card-alt text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Psicólogo Clínico</h4>
+                <p class="mb-0 text-muted">CRP 03/18232</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qualification-item mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-graduation-cap text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Aperfeiçoamento em Psicologia</h4>
+                <p class="mb-0 text-muted">Plantão Psicológico</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qualification-item mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-brain text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Psicanalista</h4>
+                <p class="mb-0 text-muted">Extensão de Aperfeiçoamento em Clínica Psicanalítica</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qualification-item mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-users text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Terapeuta Sistêmico</h4>
+                <p class="mb-0 text-muted">Casais e Família</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qualification-item mb-4 pb-3 border-bottom">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-chalkboard-teacher text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Palestrante</h4>
+                <p class="mb-0 text-muted">Eventos e workshops</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qualification-item">
+            <div class="d-flex align-items-start">
+              <div class="qualification-icon bg-primary-light rounded-circle p-3 me-4">
+                <i class="fas fa-shield-alt text-primary"></i>
+              </div>
+              <div>
+                <h4 class="h5 mb-1">Enfrentamento à Exploração Sexual</h4>
+                <p class="mb-0 text-muted">Crianças e Adolescentes - UECE/Instituto Aliança</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
- <!-- Áreas de Atuação -->
-<section id="areas" class="py-5">
+  <!-- Áreas de Atuação -->
+<section id="areas" class="py-5 bg-light" aria-label="Áreas de atuação">
   <div class="container">
     <h2 class="section-title">Áreas de Atuação</h2>
     <div class="row g-4">
+      <!-- Card 1 -->
       <div class="col-md-4">
-        <div class="card card-hover flip-card">
+        <div class="flip-card" tabindex="0" aria-label="Ansiedade - Card interativo">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <i class="fas fa-brain fa-2x mb-3"></i>
-              <h5 class="card-title">Ansiedade</h5>
+              <i class="fas fa-brain fa-3x mb-3 animate__animated animate__pulse" aria-hidden="true"></i>
+              <h3 class="card-title h5">Ansiedade</h3>
               <p class="card-text">Transtornos de ansiedade e sintomas relacionados.</p>
+              <span class="badge bg-primary">Saiba mais</span>
             </div>
             <div class="flip-card-back">
-              <img src="images/ansiedade.jpg" alt="Ansiedade" class="img-fluid">
-              <p>Tratamento especializado para ajudar a controlar os sintomas de ansiedade, melhorando a qualidade de vida.</p>
+              <p class="mt-3">Tratamento especializado para ajudar a controlar os sintomas de ansiedade, melhorando a qualidade de vida.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Técnicas cognitivo-comportamentais</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Mindfulness</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Psicoeducação</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Card 2 -->
       <div class="col-md-4">
-        <div class="card card-hover flip-card">
+        <div class="flip-card" tabindex="0" aria-label="Relações - Card interativo">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <i class="fas fa-users fa-2x mb-3"></i>
-              <h5 class="card-title">Relações</h5>
+              <i class="fas fa-users fa-3x mb-3 animate__animated animate__fadeIn" aria-hidden="true"></i>
+              <h3 class="card-title h5">Relações</h3>
               <p class="card-text">Conjugal, parental e questões de relacionamento.</p>
+              <span class="badge bg-primary">Saiba mais</span>
             </div>
             <div class="flip-card-back">
-              <img src="images/feche-o-casal-sorridente-na-terapia-scaled.jpg" alt="Relações" class="img-fluid">
-              <p>Consultoria para resolver questões familiares e de relacionamento, com foco no bem-estar emocional.</p>
+              <p class="mt-3">Consultoria para resolver questões familiares e de relacionamento, com foco no bem-estar emocional.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Terapia de casal</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Mediação familiar</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Comunicação não-violenta</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Card 3 -->
       <div class="col-md-4">
-        <div class="card card-hover flip-card">
+        <div class="flip-card" tabindex="0" aria-label="Luto e Depressão - Card interativo">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <i class="fas fa-heart-broken fa-2x mb-3"></i>
-              <h5 class="card-title">Luto e Depressão</h5>
+              <i class="fas fa-heart-broken fa-3x mb-3 animate__animated animate__flash" aria-hidden="true"></i>
+              <h3 class="card-title h5">Luto e Depressão</h3>
               <p class="card-text">Apoio em processos de luto e sintomas depressivos.</p>
+              <span class="badge bg-primary">Saiba mais</span>
             </div>
             <div class="flip-card-back">
-              <img src="images/luto.jpeg" alt="Luto" class="img-fluid">
-              <p>Ajuda terapêutica para superar o luto e lidar com os sentimentos associados à depressão.</p>
+              <p class="mt-3">Ajuda terapêutica para superar o luto e lidar com os sentimentos associados à depressão.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Acompanhamento individualizado</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Técnicas de ressignificação</li>
+                <li><i class="fas fa-check-circle me-2 text-success"></i> Suporte emocional</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -120,58 +266,28 @@
   </div>
 </section>
 
+<!-- CDN Animate.css para animações -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <!-- Por que Fazer Terapia -->
-  <section id="terapia" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title">Por que Fazer Terapia?</h2>
-      <p>Contrariando expectativas, a terapia pode ser o caminho para conhecer e encarar a si mesmo(a). Esse percurso pode ser desafiador e exige tempo e disposição para olhar para dentro e se descobrir de maneiras que você talvez nem imagine.</p>
-      <p>Você está pronto(a) para trilhar esse caminho? A oportunidade é agora.</p>
-    </div>
-  </section>
 
-  <!-- Abordagens Terapêuticas -->
-  <section id="abordagens" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title">Abordagens Terapêuticas</h2>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Autoconhecimento:</strong> Entenda padrões e comportamentos.</li>
-        <li class="list-group-item"><strong>Dores Emocionais:</strong> Identifique e acesse dores não físicas.</li>
-        <li class="list-group-item"><strong>Modos de Funcionamento:</strong> Reflita sobre reações e hábitos.</li>
-      </ul>
-    </div>
-  </section>
 
- <!-- Depoimentos -->
- <section id="depoimentos" class="py-5">
+<!-- Por que Fazer Terapia -->
+<section id="terapia" class="py-5 bg-light">
   <div class="container">
-    <h2 class="section-title">Depoimentos</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="testimonial-flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="testimonial-flip-card-inner">
-            <div class="testimonial-flip-card-front">
-              "Você merece o mundo... um profissional incrível!"
-            </div>
-            <div class="testimonial-flip-card-back">
-              <i class="fas fa-heart fa-3x mb-3" style="color: #006e8e;"></i>
-              <p>Alex me acolheu em um momento difícil com muita empatia e cuidado.</p>
-              <div class="author">Colega em Psicologia</div>
-            </div>
-          </div>
-        </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 text-center">
+        <img src="images/2.jpeg" alt="Por que fazer terapia" class="img-fluid rounded mb-4" loading="lazy" style="max-width: 400px;">
       </div>
-      <div class="col-md-6">
-        <div class="testimonial-flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="testimonial-flip-card-inner">
-            <div class="testimonial-flip-card-front">
-              "Sua sensibilidade e escuta acolhedora são inspiradoras."
-            </div>
-            <div class="testimonial-flip-card-back">
-              <i class="fas fa-comments fa-3x mb-3" style="color: #006e8e;"></i>
-              <p>As sessões com ele foram fundamentais para que eu me sentisse ouvida.</p>
-              <div class="author">Colega Terapeuta</div>
-            </div>
+      <div class="col-md-6 order-md-1">
+        <div class="p-4 rounded shadow-sm border border-primary bg-white">
+          <h2 class="section-title">Por que Fazer Terapia?</h2>
+          <p class="lead text-muted">Terapia não é apenas para momentos de crise — é um convite ao autoconhecimento, à transformação pessoal e ao cuidado consigo mesmo.</p>
+          <p><strong>Contrariando muitas expectativas</strong>, o processo terapêutico é uma jornada profunda e enriquecedora que exige coragem, paciência e disposição para mergulhar em si mesmo(a).</p>
+          <p>É comum evitar o olhar interno, mas essa introspecção é justamente o que pode abrir caminhos para o crescimento e para uma vida com mais sentido. Na terapia, você descobre nuances de quem realmente é, além das máscaras e dos automatismos do dia a dia.</p>
+          <p class="mb-4">Está pronto(a) para começar essa caminhada? A oportunidade é agora.</p>
+          <div class="signature mt-4">
+            <p class="mb-0 fw-bold">Alex Ferreira</p>
+            <p class="text-muted">CRP 03/18232</p>
           </div>
         </div>
       </div>
@@ -181,60 +297,263 @@
 
 
 
-  <!-- Contato -->
+<!-- Como Podemos Te Ajudar -->
+<section id="ajuda" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <img src="images/20.jpeg" alt="Como podemos ajudar" class="img-fluid rounded mb-4" loading="lazy" style="max-width: 400px;">
+      </div>
+      <div class="col-md-6">
+        <h2 class="section-title">Como Podemos Te Ajudar</h2>
+        <p class="lead">Ajudo pessoas a lidarem com:</p>
+        <ul class="help-list">
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Transtornos de Ansiedade</li>
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Baixa autoestima</li>
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Problemas de relação Conjugal e/ou Parental</li>
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Questões Internas</li>
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Lutos</li>
+          <li><i class="fas fa-check-circle me-2 text-primary"></i> Processos depressivos</li>
+        </ul>
+        <div class="questions mt-4">
+          <p class="question"><strong>Vamos tratar do nosso Eu?</strong></p>
+          <p class="question">Quais são suas questões no momento?</p>
+          <p class="question">Como você acha que está lidando com o que te angustia?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Processos Terapêuticos - Seção nova -->
+   <section id="processos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Alguns Processos Terapêuticos</h2>
+      <div class="row">
+        <!-- Processo 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="process-card h-100">
+            <img src="images/autoconhecimento (2).png" alt="Autoconhecimento" class="img-fluid rounded-top" loading="lazy">
+            <div class="p-4">
+              <h3 class="h5">Autoconhecimento</h3>
+              <p>Você já se perguntou o porquê de sempre enxergar nas pessoas aquilo que você acha inaceitável, aquilo que você repudia?</p>
+              <p class="cta">Vamos falar sobre isso?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Processo 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="process-card h-100">
+            <img src="images/dores.png" alt="Dores não físicas" class="img-fluid rounded-top" loading="lazy">
+            <div class="p-4">
+              <h3 class="h5">Conhecendo as dores não físicas</h3>
+              <p>E quando tudo dói, mas a dor não é física? De onde vem essa dor que não passa, como acessá-la?</p>
+              <p>Não olhar para algo, não fará esse algo desaparecer.</p>
+              <p class="cta">Vamos falar sobre isso?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Processo 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="process-card h-100">
+            <img src="images/funcionamento.jpg" alt="Modos de funcionamento" class="img-fluid rounded-top" loading="lazy">
+            <div class="p-4">
+              <h3 class="h5">Modos de funcionamento</h3>
+              <p>Você consegue identificar a maneira como você se comporta diante de determinadas situações?</p>
+              <p>Existem padrões que lhes são familiares?</p>
+              <p class="cta">Vamos falar sobre isso?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos Ampliados -->
+  <section id="depoimentos" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Depoimentos</h2>
+      <div class="row g-4">
+        <!-- Depoimento 1 -->
+        <div class="col-md-6">
+          <div class="testimonial-card p-4 rounded">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left fa-2x mb-3 text-muted"></i>
+              <p class="testimonial-text">"Você merece o mundo, um homem sensacional em todos os aspectos, bom filho, bom marido, o melhor pai que seus filhos poderiam ter, um profissional incrível. As pessoas que cruzam seu caminho e se tornam seus pacientes tem sorte na vida!"</p>
+            </div>
+            <div class="testimonial-author d-flex align-items-center mt-4">
+              <img src="images/colega1.jpg" alt="Colega em Psicologia" class="rounded-circle me-3" width="60" height="60">
+              <div>
+                <p class="mb-0 font-weight-bold">Colega em Psicologia</p>
+                <small class="text-muted">@Alex Ferreira</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="col-md-6">
+          <div class="testimonial-card p-4 rounded">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left fa-2x mb-3 text-muted"></i>
+              <p class="testimonial-text">"Meu amigo! É uma alegria compartilhar não só a caminhada na faculdade, nos caminhos da psicanálise, mas agora também essa nova etapa da nossa formação. Sua sensibilidade, gentileza e escuta acolhedora são inspiradoras, e tenho certeza de que você faz a diferença na vida de todos ao seu redor."</p>
+            </div>
+            <div class="testimonial-author d-flex align-items-center mt-4">
+              <img src="images/colega2.jpg" alt="Colega Terapeuta" class="rounded-circle me-3" width="60" height="60">
+              <div>
+                <p class="mb-0 font-weight-bold">Colega Terapeuta</p>
+                <small class="text-muted">Depoimento profissional</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contato - Seção atualizada -->
   <section id="contato" class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Contato</h2>
+      <h2 class="section-title">Contate-nos</h2>
       <div class="row">
         <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li><i class="fas fa-envelope me-2"></i>alexferreiram3@gmail.com</li>
-            <li><i class="fas fa-phone me-2"></i>(71) 99701-0328</li>
-            <li><i class="fas fa-map-marker-alt me-2"></i>123 Anywhere St., Any City, ST</li>
-            <li><i class="fab fa-instagram me-2"></i>@PsiAlexFerreira</li>
-            <li><i class="fab fa-facebook me-2"></i>Alex Ferreira</li>
-            <li><i class="fab fa-youtube me-2"></i>AlexFerreira Psicólogo e Psicanalista</li>
-            <li><i class="fab fa-linkedin me-2"></i>Perfil no LinkedIn</li>
-          </ul>
-          <p><strong>Horário de Atendimento:</strong><br>Seg-Sex: 08:00–20:00<br>Sáb: 09:00–12:00<br>Dom: Fechado</p>
+          <div class="contact-info">
+            <div class="contact-item mb-4">
+              <i class="fas fa-map-marker-alt fa-2x me-3"></i>
+              <div>
+                <h5 class="mb-1">Endereço</h5>
+                <p class="mb-0">123 Anywhere St.<br>Any City, ST 12345</p>
+              </div>
+            </div>
+            <div class="contact-item mb-4">
+              <i class="fas fa-phone fa-2x me-3"></i>
+              <div>
+                <h5 class="mb-1">Telefone</h5>
+                <p class="mb-0">(71) 99701-0328</p>
+              </div>
+            </div>
+            <div class="contact-item mb-4">
+              <i class="fas fa-envelope fa-2x me-3"></i>
+              <div>
+                <h5 class="mb-1">Email</h5>
+                <p class="mb-0">alexferreiram3@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-media mt-5">
+            <h5 class="mb-3">Siga-nos online</h5>
+            <div class="social-icons">
+              <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-youtube fa-2x"></i></a>
+              <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+          </div>
+          
+          <div class="accessibility mt-4">
+            <p class="small"><i class="fas fa-universal-access me-2"></i> Este é um local de trabalho acessível. Pessoas com deficiência podem se inscrever.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="hours mb-5">
+            <h5 class="mb-3">Horário de Atendimento</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><strong>Segunda a sexta-feira</strong></li>
+              <li class="mb-2">Presencial e online</li>
+              <li class="mb-2">08:00 às 20:00</li>
+              <li class="mb-2"><strong>Sábado</strong></li>
+              <li>09:00 às 12:00</li>
+              <li class="mt-2">Fechado aos domingos</li>
+            </ul>
+          </div>
+          
+          <img src="images/24.jpeg" alt="Clínica" class="img-fluid rounded" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
   
           <!-- Mapa da Clínica -->
           <div class="mt-4">
             <h5 class="mb-3">Localização da Clínica</h5>
             <div class="ratio ratio-16x9">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.9116932314013!2d-38.50157258467458!3d-12.973040390855137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161a7af115e6bb%3A0xd17cc4d9be8e4acb!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1714420593671!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1779.81707961799!2d-38.42441190689662!3d-12.923072132049093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716116583940487%3A0x5b30c38eb26e4493!2sCondominio%20Residencial%20Vila%20do%20Bosque!5e1!3m2!1spt-BR!2sbr!4v1745935300390!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
   
-        </div>
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+       <!-- Seção de Contato Atualizada -->
+<section id="contato" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Contate-nos</h2>
+    
+    <div class="row g-5 align-items-center">
+      <!-- Coluna do Formulário -->
+      <div class="col-lg-6">
+        <div class="contact-form-box p-4 p-lg-5 rounded shadow-sm">
+          <h3 class="form-title mb-4 text-center">Fale comigo e agende sua consulta</h3>
+          
+          <form id="contactForm">
+            <div class="mb-4">
+              <label for="nome" class="form-label">Seu Nome</label>
+              <div class="input-group">
+                <span class="input-group-text bg-primary text-white">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input type="text" class="form-control" id="nome" placeholder="Como gostaria de ser chamado(a)" required>
+              </div>
             </div>
-            <div class="mb-3">
+            
+            <div class="mb-4">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Seu email">
+              <div class="input-group">
+                <span class="input-group-text bg-primary text-white">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+              </div>
             </div>
-            <div class="mb-3">
+            
+            <div class="mb-4">
+              <label for="telefone" class="form-label">Telefone</label>
+              <div class="input-group">
+                <span class="input-group-text bg-primary text-white">
+                  <i class="fas fa-phone"></i>
+                </span>
+                <input type="tel" class="form-control" id="telefone" placeholder="(71) 99999-9999">
+              </div>
+            </div>
+            
+            <div class="mb-4">
               <label for="mensagem" class="form-label">Mensagem</label>
-              <textarea class="form-control" id="mensagem" rows="4"></textarea>
+              <textarea class="form-control" id="mensagem" rows="5" placeholder="Conte-me como posso te ajudar..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i> Enviar Mensagem
+              </button>
+            </div>
           </form>
         </div>
       </div>
+      
+      <!-- Coluna da Imagem -->
+      <div class="col-lg-6">
+        <div class="contact-image-container text-center">
+          <img src="images/17.jpeg" alt="Agendamento de consulta psicológica" class="img-fluid rounded-lg shadow-lg" loading="lazy">
+          <div class="image-overlay-text p-4 mt-4">
+            <h4 class="mb-3">Primeira Consulta</h4>
+            <p class="mb-0">Um espaço acolhedor para você compartilhar suas questões e juntos encontrarmos o melhor caminho para seu bem-estar emocional.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
   
 
   <!-- Footer -->
@@ -245,54 +564,63 @@
   </footer>
 
   <!-- Bootstrap JS Bundle -->
+  <!-- Scripts no final do body -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Função para alterar a cor da navbar ao rolar
-    window.onscroll = function() {toggleNavbar()};
-  
-    function toggleNavbar() {
-      var navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    }
-
-    // JavaScript para o formulário de contato
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const nome = document.getElementById('nome').value;
-      const email = document.getElementById('email').value;
-      const mensagem = document.getElementById('mensagem').value;
-
-      fetch('/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nome: nome,
-          email: email,
-          mensagem: mensagem
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert("Mensagem enviada com sucesso!");
-          document.getElementById('contactForm').reset(); // Limpa o formulário após envio
-        } else {
-          alert("Ocorreu um erro ao enviar a mensagem.");
+    // Navbar scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      
+      // Ativar item de menu correspondente à seção visível
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 300)) {
+          current = section.getAttribute('id');
         }
-      })
-      .catch(error => {
-        console.error("Erro:", error);
-        alert("Ocorreu um erro ao enviar a mensagem.");
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
       });
     });
-  </script>
 
+    // Formulário de contato
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+      
+      // Simulação de envio (substituir por fetch real)
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i> Enviado!';
+        form.reset();
+        
+        // Mostrar feedback visual
+        const feedback = document.createElement('div');
+        feedback.className = 'alert alert-success mt-3';
+        feedback.setAttribute('role', 'alert');
+        feedback.innerHTML = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        form.appendChild(feedback);
+        
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Enviar Mensagem';
+          feedback.remove();
+        }, 5000);
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
