@@ -31,6 +31,16 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 587,
+  secure: false, // true para porta 465, false para outras
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
+  }
+});
+
 // Rota para envio de e-mail com validação
 app.post('/send-email', async (req, res) => {
   const { nome, email, mensagem } = req.body;
