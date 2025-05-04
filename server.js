@@ -10,7 +10,55 @@ const cors = require('cors');
 const app = express();
 
 // Middlewares de segurança
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          'https://cdn.jsdelivr.net',
+          'https://cdnjs.cloudflare.com',
+          'https://maps.googleapis.com',
+          'https://www.google.com'
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          'https://cdn.jsdelivr.net',
+          'https://cdnjs.cloudflare.com',
+          'https://fonts.googleapis.com'
+        ],
+        imgSrc: [
+          "'self'",
+          'data:',
+          'https://maps.gstatic.com',
+          'https://maps.googleapis.com',
+          'https://www.google.com'
+        ],
+        fontSrc: [
+          "'self'",
+          'https://cdnjs.cloudflare.com',
+          'https://fonts.gstatic.com',
+          'data:'
+        ],
+        connectSrc: [
+          "'self'",
+          'https://maps.googleapis.com'
+        ],
+        frameSrc: [
+          "'self'",
+          'https://www.google.com',
+          'https://www.google.com/maps'
+        ],
+        objectSrc: ["'none'"],
+        upgradeInsecureRequests: []
+      }
+    }
+  })
+);
+
 app.use(cors({
   origin: process.env.ALLOWED_ORIGINS || '*'
 }));

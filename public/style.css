@@ -489,3 +489,26 @@ footer p {
 .rounded-lg {
   border-radius: 12px;
 }
+
+/* Cor verde ao passar o mouse em qualquer item do menu */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #28a745 !important; /* verde */
+}
+
+/* Garante que o dropdown também herde a cor ao passar o mouse */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e6f4ea; /* fundo verde claro */
+  color: #28a745;
+}
+
+/* Estiliza o botão agendar como destacado */
+.btn-agendar {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-agendar:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
