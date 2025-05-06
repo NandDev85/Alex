@@ -512,3 +512,215 @@ footer p {
   background-color: #218838;
   border-color: #1e7e34;
 }
+
+/* Estilos para o formulário de agendamento */
+#agendamento {
+  background-color: #f8fafc;
+}
+
+#agendamento .card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#agendamento .form-control,
+#agendamento .form-select {
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+#agendamento .form-control:focus,
+#agendamento .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 110, 142, 0.15);
+}
+
+#agendamento .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+#agendamento .btn-primary:hover {
+  background-color: #005a7a;
+  transform: translateY(-2px);
+}
+
+#agendamento .invalid-feedback {
+  font-size: 0.85rem;
+}
+
+/* Efeito para campos válidos */
+#agendamento .was-validated .form-control:valid,
+#agendamento .was-validated .form-select:valid {
+  border-color: #28a745;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+@media (max-width: 768px) {
+  #agendamento .card-body {
+    padding: 2rem;
+  }
+}
+
+/* Adicione ao seu arquivo CSS */
+#formFeedback {
+  transition: all 0.5s ease;
+}
+
+#formFeedback .alert {
+  border-radius: 8px;
+  border-left: 5px solid;
+}
+
+#formFeedback .alert-success {
+  border-left-color: #28a745;
+}
+
+#formFeedback .alert-danger {
+  border-left-color: #dc3545;
+}
+
+#formFeedback .alert i {
+  font-size: 1.5rem;
+}
+
+#formFeedback .alert-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Estilo para a logo na navbar */
+.navbar-logo {
+  height: 1.5em; /* Altura relativa ao tamanho da fonte */
+  width: auto; /* Mantém a proporção */
+  max-height: 30px; /* Altura máxima para telas grandes */
+  transition: all 0.3s ease;
+}
+
+/* Ajuste para quando a navbar está com scroll */
+.navbar.scrolled .navbar-logo {
+  height: 1.2em;
+  max-height: 24px;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 992px) {
+  .navbar-logo {
+    height: 1.2em;
+    max-height: 24px;
+  }
+}
+
+
+/*apagar aqui se não der certo */
+/* Adicione ao seu style.css */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: var(--transition);
+}
+
+.navbar.scrolled .logo-initials {
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+}
+
+/* Logo com iniciais AF - Estilo principal */
+.logo-af {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  margin-right: 12px;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+/* Versão reduzida para navbar com scroll */
+.navbar.scrolled .logo-af {
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+}
+
+/* Versão para footer (pode ser maior) */
+footer .logo-af {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+/* Texto ao lado da logo no navbar */
+.navbar-brand-text {
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+/* Aplica apenas ao footer especificamente */
+footer .col-md-4 h4,                  /* Títulos "Navegação" e "Contato" */
+footer .col-md-4 a,                   /* Todos os links */
+footer .col-md-4 .text-decoration-none, /* Links sem sublinhado */
+footer .col-md-4 .social-icons a,     /* Ícones sociais */
+footer .col-md-4 .fab,                /* Ícones Font Awesome */
+footer .col-md-4 .fas,                /* Ícones Font Awesome sólidos */
+footer .row .text-md-start p,         /* Texto de copyright */
+footer .row .text-md-end a {          /* Links "Política" e "Termos" */
+  color: white !important;
+}
+
+/* Efeitos hover - opcional */
+footer .col-md-4 a:hover,
+footer .row .text-md-end a:hover {
+  color: var(--secondary-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Ícones sociais no hover */
+footer .social-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Estilo específico para o ícone do YouTube */
+.fa-youtube {
+  color: #FF0000;
+  transition: var(--transition);
+}
+
+.fa-youtube:hover {
+  color: #FF0000; /* Vermelho característico do YouTube */
+  transform: scale(1.1);
+}
+
+.fa-whatsapp:hover {
+  color: #25D366 !important; /* Verde característico do WhatsApp */
+}

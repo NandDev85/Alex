@@ -50,7 +50,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" aria-label="Navegação principal">
     <div class="container">
-      <a class="navbar-brand" href="#home" aria-label="Alex Ferreira - Página inicial">Alex Ferreira</a>
+      <a class="navbar-brand" href="#home" aria-label="Alex Ferreira - Página inicial">
+        <span class="logo-initials">AF</span>
+        Alex Ferreira
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -447,9 +450,11 @@
           <div class="social-media mt-5">
             <h5 class="mb-3">Siga-nos online</h5>
             <div class="social-icons">
-              <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
-              <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
-              <a href="#" class="me-3"><i class="fab fa-youtube fa-2x"></i></a>
+              <a href="https://instagram.com/psialexferreira" target="_blank" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://wa.me/5571997010328" class="me-3" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp fa-2x"></i>
+              </a>
+              <a href="https://www.youtube.com/@alexferreira-psicologopsic4075" target="_blank" class="me-3"><i class="fab fa-youtube fa-2x"></i></a>
               <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
           </div>
@@ -487,80 +492,156 @@
           </div>
   
        <!-- Seção de Contato Atualizada -->
-<section id="agendamento" class="py-5 bg-light">
+<!-- Substitua a seção #agendamento por esta versão -->
+<section id="agendamento" class="py-5">
   <div class="container">
-    <h2 class="section-title text-center mb-5">Contate-nos</h2>
-    
-    <div class="row g-5 align-items-center">
-      <!-- Coluna do Formulário -->
-      <div class="col-lg-6">
-        <div class="contact-form-box p-4 p-lg-5 rounded shadow-sm">
-          <h3 class="form-title mb-4 text-center">Fale comigo e agende sua consulta</h3>
-          
-          <form id="contactForm">
-            <div class="mb-4">
-              <label for="nome" class="form-label">Seu Nome</label>
-              <div class="input-group">
-                <span class="input-group-text bg-primary text-white">
-                  <i class="fas fa-user"></i>
-                </span>
-                <input type="text" class="form-control" id="nome" placeholder="Como gostaria de ser chamado(a)" required>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-lg overflow-hidden">
+          <div class="row g-0">
+            <!-- Coluna da Imagem -->
+            <div class="col-md-5 d-none d-md-block">
+              <img src="images/18.jpeg" alt="Agendamento de consulta" class="img-fluid h-100" style="object-fit: cover;">
+            </div>
+            
+            <!-- Coluna do Formulário -->
+            <div class="col-md-7">
+              <div class="card-body p-5">
+                <h2 class="card-title text-center mb-4">Agende sua Consulta</h2>
+                <p class="text-center text-muted mb-4">Preencha o formulário abaixo e entraremos em contato para confirmar seu horário</p>
+                
+                <form id="agendamentoForm" novalidate>
+                  <div class="mb-3">
+                    <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control form-control-lg" id="nomeCompleto" name="nome" required>
+                    <div class="invalid-feedback">Por favor, informe seu nome completo</div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="telefone" class="form-label">Telefone</label>
+                      <input type="tel" class="form-control form-control-lg" id="telefone" name="telefone" required>
+                      <div class="invalid-feedback">Informe um telefone válido</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                      <div class="invalid-feedback">Informe um e-mail válido</div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="tipoConsulta" class="form-label">Tipo de Consulta</label>
+                    <select class="form-select form-select-lg" id="tipoConsulta" name="tipoConsulta" required>
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="Presencial">Presencial</option>
+                      <option value="Online">Online</option>
+                    </select>
+                    <div class="invalid-feedback">Selecione o tipo de consulta</div>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="mensagem" class="form-label">Mensagem (opcional)</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Alguma informação adicional ou preferência de horário..."></textarea>
+                  </div>
+                  
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg py-3" type="submit">
+                      <i class="fas fa-calendar-check me-2"></i> Solicitar Agendamento
+                    </button>
+                  </div>
+                </form>
+                
+                <!-- Mensagens de feedback -->
+                <div id="formFeedback" class="mt-4" style="display: none;"></div>
               </div>
             </div>
-            
-            <div class="mb-4">
-              <label for="email" class="form-label">Email</label>
-              <div class="input-group">
-                <span class="input-group-text bg-primary text-white">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
-              </div>
-            </div>
-            
-            <div class="mb-4">
-              <label for="telefone" class="form-label">Telefone</label>
-              <div class="input-group">
-                <span class="input-group-text bg-primary text-white">
-                  <i class="fas fa-phone"></i>
-                </span>
-                <input type="tel" class="form-control" id="telefone" placeholder="(71) 99999-9999">
-              </div>
-            </div>
-            
-            <div class="mb-4">
-              <label for="mensagem" class="form-label">Mensagem</label>
-              <textarea class="form-control" id="mensagem" rows="5" placeholder="Conte-me como posso te ajudar..." required></textarea>
-            </div>
-            
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-lg">
-                <i class="fas fa-paper-plane me-2"></i> Enviar Mensagem
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      
-      <!-- Coluna da Imagem -->
-      <div class="col-lg-6">
-        <div class="contact-image-container text-center">
-          <img src="images/17.jpeg" alt="Agendamento de consulta psicológica" class="img-fluid rounded-lg shadow-lg" loading="lazy">
-          <div class="image-overlay-text p-4 mt-4">
-            <h4 class="mb-3">Primeira Consulta</h4>
-            <p class="mb-0">Um espaço acolhedor para você compartilhar suas questões e juntos encontrarmos o melhor caminho para seu bem-estar emocional.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  
+      
+      <!-- Coluna da Imagem
+      <div class="col-lg-6">
+        <div class="contact-image-container text-center">
+           <img src="images/ChatGPT Image 25 de abr. de 2025, 16_25_34.png" alt="Agendamento de consulta psicológica" class="img-fluid rounded-lg shadow-lg" loading="lazy"> 
+          <div class="consultation-text-box p-4 mb-5 mx-auto" style="max-width: 600px;">
+            <h3 class="mb-3">Primeira Consulta</h3>
+            <p class="lead mb-0">Um espaço acolhedor para você compartilhar suas questões e juntos encontrarmos o melhor caminho para seu bem-estar emocional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer class="footer py-5">
     <div class="container">
-      <p>© 2025 Alex Ferreira. Todos os direitos reservados.</p>
+      <div class="row">
+        <!-- Logo e nome -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="footer-logo mb-3">
+            <span class="logo-af">AF</span>
+          </div>
+          <h3 class="h5">Alex Ferreira</h3>
+          <p class="text-muted">Psicólogo Clínico<br>CRP 03/18232</p>
+        </div>
+  
+        <!-- Links rápidos -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h4 class="h5 mb-3">Navegação</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home" class="text-decoration-none">Início</a></li>
+            <li class="mb-2"><a href="#sobre" class="text-decoration-none">Sobre</a></li>
+            <li class="mb-2"><a href="#areas" class="text-decoration-none">Áreas de Atuação</a></li>
+            <li class="mb-2"><a href="#agendamento" class="text-decoration-none">Agendamento</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contato -->
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Contato</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="tel:+5571997010328" class="text-decoration-none">
+                <i class="fas fa-phone-alt me-2"></i>(71) 99701-0328
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:alexferreiram3@gmail.com" class="text-decoration-none">
+                <i class="fas fa-envelope me-2"></i>alexferreiram3@gmail.com
+              </a>
+            </li>
+            <li class="mt-4">
+              <div class="social-icons">
+                <a href="https://www.instagram.com/psialexferreira/" class="me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@alexferreira-psicologopsic4075" class="me-3" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/5571997010328" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <hr class="my-4">
+  
+      <div class="row">
+        <div class="col-md-6 text-md-start mb-3 mb-md-0">
+          <p class="mb-0">© 2025 Alex Ferreira. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-decoration-none me-3">Política de Privacidade</a>
+            <a href="#" class="text-decoration-none">Termos de Serviço</a>
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -597,34 +678,121 @@
       });
     });
 
-    // Formulário de contato
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const submitBtn = form.querySelector('button[type="submit"]');
-      
+   // Adicione este script no final do seu arquivo HTML
+document.addEventListener('DOMContentLoaded', function() {
+  const agendamentoForm = document.getElementById('agendamentoForm');
+  const formFeedback = document.getElementById('formFeedback');
+
+  if (agendamentoForm) {
+    // Formatação do telefone
+    const telefoneInput = document.getElementById('telefone');
+    if (telefoneInput) {
+      telefoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, '')
+          .replace(/(\d{2})(\d)/, '($1) $2')
+          .replace(/(\d{5})(\d)/, '$1-$2')
+          .replace(/(-\d{4})\d+?$/, '$1');
+      });
+    }
+
+    agendamentoForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (!this.checkValidity()) {
+        this.classList.add('was-validated');
+        return;
+      }
+
+      const submitBtn = this.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
-      
-      // Simulação de envio (substituir por fetch real)
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check-circle me-1"></i> Enviado!';
-        form.reset();
-        
-        // Mostrar feedback visual
-        const feedback = document.createElement('div');
-        feedback.className = 'alert alert-success mt-3';
-        feedback.setAttribute('role', 'alert');
-        feedback.innerHTML = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-        form.appendChild(feedback);
-        
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = 'Enviar Mensagem';
-          feedback.remove();
-        }, 5000);
-      }, 1500);
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span> Enviando...';
+
+      try {
+        const formData = {
+          nome: this.nome.value,
+          telefone: this.telefone.value,
+          email: this.email.value,
+          tipoConsulta: this.tipoConsulta.value,
+          mensagem: this.mensagem.value,
+          assunto: 'Novo agendamento de consulta'
+        };
+
+        const response = await fetch('/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          showFeedback('success', `
+            <div class="alert alert-success">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle me-2 fs-4"></i>
+                <div>
+                  <h5 class="alert-heading mb-1">Agendamento solicitado com sucesso!</h5>
+                  <p class="mb-0">Entraremos em contato em até 24 horas para confirmar seu horário.</p>
+                </div>
+              </div>
+            </div>
+          `);
+          this.reset();
+          this.classList.remove('was-validated');
+        } else {
+          showFeedback('danger', `
+            <div class="alert alert-danger">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-exclamation-circle me-2 fs-4"></i>
+                <div>
+                  <h5 class="alert-heading mb-1">Erro ao enviar agendamento</h5>
+                  <p class="mb-0">${data.message || 'Por favor, tente novamente mais tarde.'}</p>
+                </div>
+              </div>
+            </div>
+          `);
+        }
+      } catch (error) {
+        showFeedback('danger', `
+          <div class="alert alert-danger">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-exclamation-circle me-2 fs-4"></i>
+              <div>
+                <h5 class="alert-heading mb-1">Erro de conexão</h5>
+                <p class="mb-0">Não foi possível enviar sua solicitação. Verifique sua conexão e tente novamente.</p>
+              </div>
+            </div>
+          </div>
+        `);
+        console.error('Erro:', error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-calendar-check me-2"></i> Solicitar Agendamento';
+      }
     });
+
+    function showFeedback(type, message) {
+      formFeedback.style.display = 'block';
+      formFeedback.innerHTML = message;
+      
+      // Rolagem suave para o feedback
+      formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Remove o feedback após 10 segundos
+      setTimeout(() => {
+        formFeedback.style.opacity = '0';
+        setTimeout(() => {
+          formFeedback.style.display = 'none';
+          formFeedback.style.opacity = '1';
+        }, 500);
+      }, 10000);
+    }
+  }
+});
+    
   </script>
 </body>
 </html>
