@@ -724,3 +724,103 @@ footer .social-icons a:hover {
 .fa-whatsapp:hover {
   color: #25D366 !important; /* Verde característico do WhatsApp */
 }
+
+/* Adicionar animações suaves para transições */
+:root {
+  --transition-time: 0.3s;
+}
+
+/* Melhorar acessibilidade */
+a:focus, button:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* Otimizar para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Melhorar performance de animações */
+.animate {
+  will-change: transform, opacity;
+}
+
+/* Formulário de contato - Design aprimorado */
+#agendamento .card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 110, 142, 0.15);
+}
+
+#agendamento .form-control, 
+#agendamento .form-select {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+#agendamento .form-control:focus, 
+#agendamento .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 110, 142, 0.15);
+}
+
+/* Efeito de hover nos cards de processos terapêuticos */
+.process-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 110, 142, 0.1);
+}
+
+.process-card img {
+  transition: transform 0.5s ease;
+}
+
+.process-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Adicione no final do arquivo - Responsividade aprimorada */
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .hero .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .hero .display-4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .display-4 {
+    font-size: 2rem;
+  }
+  
+  .hero .lead {
+    font-size: 1.2rem;
+  }
+}
