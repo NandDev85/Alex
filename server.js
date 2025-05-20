@@ -22,6 +22,8 @@ app.use(
           'https://cdnjs.cloudflare.com',
           'https://maps.googleapis.com',
           'https://www.google.com'
+          
+
         ],
         styleSrc: [
           "'self'",
@@ -50,7 +52,9 @@ app.use(
         frameSrc: [
           "'self'",
           'https://www.google.com',
-          'https://www.google.com/maps'
+          'https://www.google.com/maps',
+          'https://www.youtube.com',
+          'https://www.youtube-nocookie.com'
         ],
         objectSrc: ["'none'"],
         upgradeInsecureRequests: []
