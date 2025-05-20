@@ -437,8 +437,10 @@ footer p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 110, 142, 0.8);
-  color: white;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.5rem;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -824,3 +826,58 @@ a:focus, button:focus {
     font-size: 1.2rem;
   }
 }
+
+/* === FLIP CARD UPDATES === */
+
+/* Flip-card BACK aprimorado */
+.flip-card-back {
+  background-color: #f0f2f5;
+  transform: rotateY(180deg);
+  color: var(--text-color);
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.flip-card-back ul {
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.flip-card-back li {
+  margin-bottom: 0.75rem;
+}
+
+.flip-card-back .btn-agendar {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* MOBILE fallback para flip-cards */
+@media (max-width: 768px) {
+  .flip-card-inner {
+    transform: none !important;
+    height: auto;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: static;
+    transform: none !important;
+    backface-visibility: visible;
+    box-shadow: none;
+    padding: 1.25rem;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+}
+
+.ajuda-box {
+  border: 2px solid #006e8e; /* azul suave */
+  border-radius: 1.25rem; /* cantos arredondados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* sombra leve */
+  background-color: #fff;
+}
+
